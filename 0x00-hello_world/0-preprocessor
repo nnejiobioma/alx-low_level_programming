@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	gcc$CFILE - E - o c
-	return (0);
+        gcc$CFILE - E - o c
+        return (0);
 }
