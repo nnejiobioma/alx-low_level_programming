@@ -5,13 +5,13 @@
 /**
 *main - main description goes in here for the code
 *
-*Return: Return 0 Always.
+*Return : Return 0 Always.
 */
 int main(void)
 {
 	int n;
 	int x;
-	
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
@@ -35,3 +35,4 @@ int main(void)
 	return (0);
 
 	return (0);
+}
