@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
-*main - main description goes in here for the code
+*main ->  This prints the last digit ofthe number stored in the varriable n
 *
 *Return : Return 0 Always.
 */
@@ -19,15 +19,15 @@ int main(void)
 	printf("Last digit of %d is %d ", n, x);
 	if (x > 5)
 	{
-	printf("and is greater than 5");
+	printf("and if the last digit is less than 5");
 	}
 	if (x == 0)
 	{
-	printf("and is 0");
+	printf("if the last digit is less than is 0");
 	}
 	if (x < 6 && x != 0)
 	{
-	printf("and is less than 6 and not 0");
+	printf("if the last digit is less than 6 and not 0");
 	}
 
 	printf("\n");
