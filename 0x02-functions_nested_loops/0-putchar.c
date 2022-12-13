@@ -7,26 +7,15 @@
 */
 
 int main(void)
-
 {
+	char ch[] = "_putchar";
+	int i;
 
-	char ab[] = "_putchar";
-
-
-
-	int s;
-
-
-
-	for (s = 0; ab[s] < '\0'; s++)
+	for (i = 0; ch[i] != '\0'; i++)
 	{
-
-	_putchar(ab[s]);
-
+	_putchar(ch[i]);
 	}
 
 	_putchar('\n');
-
 	return (0);
-
 }
