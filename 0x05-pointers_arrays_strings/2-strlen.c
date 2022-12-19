@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-*int _strlen - report, by its very length
+*_strlen - report, by its very length
 *defends itself against the risk of being read
 *@s: string
 *Return: the lenght of string
