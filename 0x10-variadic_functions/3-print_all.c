@@ -16,6 +16,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int j = 0;
 	char *separator = "";
+
 	format_struct_ptr fmt_arr[] = {
 	{'c', print_char},
 	{'i', print_int},
@@ -25,16 +26,20 @@ void print_all(const char * const format, ...)
 	};
 	void (*get_func_ptr)(va_list *);
 	va_list args;
+
 	va_start(args, format);
+
 	while (format && format[j] != '\0')
 	{
 	get_func_ptr = get_func(format[j], fmt_arr);
+
 	if (get_func_ptr)
 	{
 	printf("%s", separator);
 	get_func_ptr(&args);
 	separator = ", ";
-	}
+}
+
 	j++;
 	}
 	va_end(args);
@@ -52,6 +57,7 @@ void print_all(const char * const format, ...)
 void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *)
 {
 	int i = 0;
+
 	while (fmt_arr[i].format)
 	{
 	if (fmt_arr[i].format == identifier)
@@ -60,6 +66,7 @@ void (*get_func(char identifier, struct format_struct *fmt_arr))(va_list *)
 	}
 	i++;
 	}
+
 	return (fmt_arr[i].fmt_print_func);
 }
 
