@@ -1,26 +1,24 @@
-#ifndef VARIADIC_FUNCTIONS_H_
-#define VARIADIC_FUNCTIONS_H_
+#include "variadic_functions.h"
+#include <stdio.h>
 #include <stdarg.h>
-
-int _putchar(char c);
-int sum_them_all(const unsigned int n, ...);
-void print_numbers(const char *separator, const unsigned int n, ...);
-void print_strings(const char *separator, const unsigned int n, ...);
-void print_all(const char * const format, ...);
-
-
 /**
- * * struct format_struct - format-type class
- * * @format: format identifier
- * * @fmt_print_func: pointer to function that prints in the format of @format
- * */
-
-struct format_struct
+ *   * sum_them_all - sums all arguments
+ *     * @n: number of arguments
+ *       * @...: variable list of arguments
+ *         * Return: sum of all arguments
+*/
+int sum_them_all(const unsigned int n, ...)
 {
-		char format;
-			void (*fmt_print_func)(va_list *arg_list);
-};
+	unsigned int i, result;
+	va_list ap;
 
-typedef struct format_struct format_struct_ptr;
-
-#endif
+	if (n == 0)
+	return (0);
+	va_start(ap, n);
+	for (i = result = 0; i < n; i++)
+	{
+	result += va_arg(ap, int);
+	}
+	va_end(ap);
+	return (result);
+}
