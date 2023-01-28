@@ -3,20 +3,24 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- *main - function that prints all the elements of a list_t list
+ *print_list - function that prints all the elements of a list_t list
  *@h: contains linked list
  *
  * Return: the number of nodes
 */
 size_t print_list(const list_t *h)
 {
-size_t i;
+size_t num = 0;
+	const list_t *temp = h;
 
-for (i = 0; h; i++)
-{
-printf("%d\n", h->n);
-h = h->n;
-}
-return (i);
+	for (num = 0; temp; num++)
+	{
+	if (temp->str == NULL)
+	printf("[0] (nil)\n");
+	else
+	printf("[%d] %s\n", temp->len, temp->str);
+	temp = temp->next;
+	}
+	return (num);
 }
 
